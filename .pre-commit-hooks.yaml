@@ -6,8 +6,6 @@
   pass_filenames: false
   files: .*\.go
   description: Runs gosec on all go files
-
-
 # dependency-check
 - id: dependency-check
   name: OWASP Dependency Check
