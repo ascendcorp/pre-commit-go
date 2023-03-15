@@ -1,6 +1,6 @@
 - id: go-sec
   name: go security check
-  entry: run-go-sec.sh
+  entry: gosec -severity high ./...
   language: system
   pass_filenames: false
   files: .*\.go
