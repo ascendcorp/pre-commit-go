@@ -1,3 +1,4 @@
+# golang
 - id: go-sec
   name: go security check
   entry: gosec -severity high ./...
@@ -5,3 +6,13 @@
   pass_filenames: false
   files: .*\.go
   description: Runs gosec on all go files
+
+
+# dependency-check
+- id: dependency-check
+  name: OWASP Dependency Check
+  entry: dependency-check --out . --scan . --enableExperimental --failOnCVSS 0 --suppression dependency-suppressions.xml
+  pass_filenames: false
+  language: system
+  files: .*\.mod$
+  description: Runs OWASP Dependency Check on all go.mod files
