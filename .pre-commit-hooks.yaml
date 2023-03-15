@@ -1,6 +1,6 @@
 - id: go-sec
   name: go security check
-  entry: run-gosec.sh
+  entry: run-go-sec.sh
   language: system
   pass_filenames: false
   files: .*\.go
