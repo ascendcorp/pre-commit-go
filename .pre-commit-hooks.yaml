@@ -7,6 +7,13 @@
   files: .*\.go
   description: Runs gosec on all go files
 
+- id: go-sort-imports
+  name: go sort imports
+  entry: goimports -w -local github.com .
+  language: system
+  pass_filenames: false
+  files: .*\.go
+
 # dependency-check
 - id: dependency-check
   name: OWASP Dependency Check
