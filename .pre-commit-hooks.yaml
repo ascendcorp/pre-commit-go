@@ -7,6 +7,7 @@
   files: .*\.go
   description: Runs gosec on all go files
 
+
 - id: go-sort-imports
   name: go sort imports
   entry: goimports -w -local github.com .
@@ -22,3 +23,10 @@
   language: system
   files: .*\.mod$
   description: Runs OWASP Dependency Check on all go.mod files
+  
+  
+- id: giticket
+  name: giticket
+  entry: giticket
+  language: python
+  stages: [commit-msg]

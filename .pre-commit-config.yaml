@@ -28,14 +28,6 @@ repos:
     - id: yamlfmt
       args: [--mapping, '2', --sequence, '2', --offset, '0', --colons, --width, '150']
 
-- repo: local
-  hooks:
-    - id: dependency-check
-      name: OWASP Dependency Check
-      entry: dependency-check --out . --scan . --enableExperimental --failOnCVSS 0 --suppression dependency-suppressions.xml
-      pass_filenames: false
-      language: system
-      files: .*\.mod$
 
 - repo: https://github.com/commitizen-tools/commitizen
   rev: 3.5.2
